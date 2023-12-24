@@ -2,7 +2,7 @@
 
 const squareRoot = (n) => {
     if(n < 0){
-        return -1
+        return "input positive Integers"
     }
     if(n <= 1){
         return n;
