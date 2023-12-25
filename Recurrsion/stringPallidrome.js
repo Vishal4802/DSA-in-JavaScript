@@ -1,22 +1,14 @@
 const isPalidrome = (str) =>{
     n = str.length - 1
     l = 0
-    if(str.length <= 1){
-        return str + " is a palidrome"
-    }
-    return palidromeCheker(str, l, n)
+    return str.length <= 1 ? str + " is a palidrome" : palidromeCheker(str, l, n)
 }
 
 const palidromeCheker = (str, l, n) => {
     if(l>=n){
         return str + " is a palidrome"
     }
-    if(str[l] !== str[n]){
-        return str + " is a not palidrome"
-    }
-    else {
-        return palidromeCheker(str, l+1, n-1)
-    }
+    return str[l] !== str[n] ? str + " is a not palidrome" : palidromeCheker(str, l+1, n-1)
 }
 
 console.log(isPalidrome("yoy"))
